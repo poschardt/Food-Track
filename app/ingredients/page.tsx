@@ -80,7 +80,7 @@ export default function IngredientsPage() {
         </div>
         <button
           type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+          className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition-colors"
         >
           Add
         </button>
@@ -88,9 +88,9 @@ export default function IngredientsPage() {
 
       {/* List */}
       {loading ? (
-        <p className="text-gray-400 text-sm">Loading…</p>
+        <p className="text-gray-500 text-sm">Loading…</p>
       ) : ingredients.length === 0 ? (
-        <p className="text-gray-400 text-sm">No ingredients yet. Add one above.</p>
+        <p className="text-gray-500 text-sm">No ingredients yet. Add one above.</p>
       ) : (
         <table className="w-full text-sm">
           <thead>
