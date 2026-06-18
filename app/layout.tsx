@@ -16,8 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col bg-gray-50 text-gray-900">
         <nav className="bg-white border-b border-gray-200 px-6 py-3 flex gap-6 items-center">
           <Link href="/" className="font-semibold text-lg text-green-700">Food Track</Link>
-          <Link href="/ingredients" className="text-sm text-gray-600 hover:text-gray-900">Ingredients</Link>
-          <Link href="/recipes" className="text-sm text-gray-600 hover:text-gray-900">Recipes</Link>
+          <Link href="/ingredients" className="text-sm text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-400 rounded px-1">Ingredients</Link>
+          <Link href="/recipes" className="text-sm text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-400 rounded px-1">Recipes</Link>
         </nav>
         <main className="flex-1 px-6 py-8 max-w-3xl mx-auto w-full">
           {children}

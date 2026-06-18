@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="grid grid-cols-2 gap-4">
         <Link
           href="/ingredients"
-          className="block p-6 bg-white rounded-xl border border-gray-200 hover:border-green-400 hover:shadow-sm transition-all"
+          className="block p-6 bg-white rounded-xl border border-gray-200 hover:border-green-400 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-green-400"
         >
           <div className="text-2xl mb-2">🥕</div>
           <div className="font-semibold">Ingredients</div>
@@ -18,7 +18,7 @@ export default function HomePage() {
 
         <Link
           href="/recipes"
-          className="block p-6 bg-white rounded-xl border border-gray-200 hover:border-green-400 hover:shadow-sm transition-all"
+          className="block p-6 bg-white rounded-xl border border-gray-200 hover:border-green-400 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-green-400"
         >
           <div className="text-2xl mb-2">📖</div>
           <div className="font-semibold">Recipes</div>

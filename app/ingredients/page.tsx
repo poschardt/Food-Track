@@ -94,7 +94,7 @@ export default function IngredientsPage() {
       ) : (
         <table className="w-full text-sm">
           <thead>
-            <tr className="text-left text-gray-500 border-b border-gray-200">
+            <tr className="text-left text-gray-600 border-b border-gray-200">
               <th className="pb-2 font-medium">Name</th>
               <th className="pb-2 font-medium">Quantity</th>
               <th className="pb-2 font-medium">Unit</th>
@@ -105,7 +105,7 @@ export default function IngredientsPage() {
             {ingredients.map(ing => (
               <tr
                 key={ing.id}
-                className={`border-b border-gray-100 ${ing.quantity <= ing.min_quantity ? "text-red-600" : ""}`}
+                className={`border-b border-gray-100 ${ing.quantity <= ing.min_quantity ? "bg-red-50 text-red-700" : ""}`}
               >
                 <td className="py-2">{ing.name}</td>
                 <td className="py-2">{ing.quantity}</td>

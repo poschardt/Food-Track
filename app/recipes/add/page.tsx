@@ -63,7 +63,7 @@ export default function AddRecipePage() {
         </div>
         <div>
           <label className="block text-sm font-medium mb-1">Recipe text</label>
-          <p className="text-xs text-gray-400 mb-2">Paste the full recipe — ingredients and instructions. Claude will extract the ingredients in Phase 2.</p>
+          <p className="text-xs text-gray-500 mb-2">Paste the full recipe — ingredients and instructions. Claude will extract the ingredients in Phase 2.</p>
           <textarea
             required
             placeholder="Paste your recipe here..."
@@ -84,7 +84,7 @@ export default function AddRecipePage() {
           <button
             type="button"
             onClick={() => router.push("/recipes")}
-            className="px-4 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 transition-colors"
+            className="px-4 py-2 rounded-lg text-sm text-gray-600 border border-gray-200 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors"
           >
             Cancel
           </button>
