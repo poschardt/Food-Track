@@ -56,26 +56,26 @@ export default function IngredientsPage() {
             placeholder="Name (e.g. Chicken breast)"
             value={form.name}
             onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-            className="col-span-2 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="col-span-2 border rounded-lg px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
           <input
             placeholder="Quantity (e.g. 500)"
             value={form.quantity}
             onChange={e => setForm(f => ({ ...f, quantity: e.target.value }))}
-            className="border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="border rounded-lg px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
           <input
             required
             placeholder="Unit (e.g. g, ml, count)"
             value={form.unit}
             onChange={e => setForm(f => ({ ...f, unit: e.target.value }))}
-            className="border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="border rounded-lg px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
           <input
             placeholder="Low-stock alert at (e.g. 100)"
             value={form.min_quantity}
             onChange={e => setForm(f => ({ ...f, min_quantity: e.target.value }))}
-            className="col-span-2 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="col-span-2 border rounded-lg px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
         </div>
         <button
