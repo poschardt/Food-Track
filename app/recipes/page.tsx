@@ -20,16 +20,16 @@ export default function RecipesPage() {
         <h1 className="text-2xl font-bold">Recipes</h1>
         <Link
           href="/recipes/add"
-          className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+          className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition-colors"
         >
           + Add recipe
         </Link>
       </div>
 
       {loading ? (
-        <p className="text-gray-400 text-sm">Loading…</p>
+        <p className="text-gray-500 text-sm">Loading…</p>
       ) : recipes.length === 0 ? (
-        <p className="text-gray-400 text-sm">No recipes yet. Add one to get started.</p>
+        <p className="text-gray-500 text-sm">No recipes yet. Add one to get started.</p>
       ) : (
         <div className="space-y-3">
           {recipes.map(recipe => (
