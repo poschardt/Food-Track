@@ -33,13 +33,17 @@ export default function RecipesPage() {
       ) : (
         <div className="space-y-3">
           {recipes.map(recipe => (
-            <div key={recipe.id} className="bg-white rounded-xl border border-gray-200 p-5 hover:border-green-300 transition-colors">
+            <Link
+              key={recipe.id}
+              href={`/recipes/${recipe.id}`}
+              className="block bg-white rounded-xl border border-gray-200 p-5 hover:border-green-400 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
+            >
               <div className="font-semibold">{recipe.name}</div>
               <div className="text-sm text-gray-500 mt-1">
                 {recipe.servings} serving{recipe.servings !== 1 ? "s" : ""} ·{" "}
                 {new Date(recipe.created_at).toLocaleDateString()}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}
