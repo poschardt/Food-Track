@@ -2,9 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
 import { Recipe } from '@/lib/types';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const q = request.nextUrl.searchParams.get('q')?.trim();
   const db = getDb();
-  const recipes = db.prepare('SELECT * FROM recipes ORDER BY created_at DESC').all() as Recipe[];
+
+  const recipes = q
+    ? db.prepare(
+        'SELECT * FROM recipes WHERE name LIKE ? OR raw_text LIKE ? ORDER BY created_at DESC'
+      ).all(`%${q}%`, `%${q}%`) as Recipe[]
+    : db.prepare('SELECT * FROM recipes ORDER BY created_at DESC').all() as Recipe[];
+
   return NextResponse.json(recipes);
 }
 
